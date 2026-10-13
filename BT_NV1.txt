@@ -1,0 +1,22 @@
+User story 
+Actor: Nhân viên Kho
+
+ 1/ As a[ Nhân viên kho], I want[ nhập kho và cập nhật số lượng thiết bị mới về], so that [quản lý chính xác lượng tài sản hiện có của tổ chức].
+  Given [nhân viên ở giao diện quản lý kho], When[ quét mã vạch thiết bị mới và nhập số lượng rồi bấm "Xác nhận nhập"], Then[ hệ thống cập nhật tăng số lượng tồn kho tương ứng.]
+  Given [nhập thiếu thông tin bắt buộc], When [bấm lưu], Then[ hệ thống hiển thị cảnh báo lỗi.]
+
+ 2/ As a [Nhân viên kho], I want [tạo phiếu xuất kho khi có bộ phận mượn thiết bị], so that [theo dõi được ai đang giữ tài sản nào.]
+  Given [có yêu cầu mượn được duyệt], When [nhân viên chọn thiết bị và điền tên người nhận rồi bấm "Xuất kho"], Then[ trạng thái thiết bị chuyển thành "Đang mượn".]
+
+Actor: Kỹ thuật viên bảo trì 
+
+  3/As a [Kỹ thuật viên bảo trì], I want [nhận thông báo khi có thiết bị báo hỏng], so that [kịp thời kiểm tra và sửa chữa.]
+  Given [có thiết bị được đánh dấu lỗi], When [hệ thống ghi nhận], Then[ kỹ thuật viên nhận được phiếu báo hỏng kèm mô tả chi tiết lỗi.]
+
+  4/As a [Kỹ thuật viên bảo trì], I want [cập nhật trạng thái sửa chữa], so that [các bộ phận khác biết thiết bị đã sẵn sàng sử dụng lại chưa.]
+  Given [kỹ thuật viên đã sửa xong thiết bị], When [cập nhật trạng thái thành "Hoạt động tốt" và lưu lại], Then [thiết bị tự động chuyển về trạng thái sẵn sàng trong kho.]
+
+Actor: Quản lý cấp cao
+
+  5/As a [Quản lý cấp cao], I want [xem báo cáo tài chính và chi phí vận hành hàng tháng], so that [đưa ra quyết định phân bổ ngân sách hợp lý.]
+Given [quản lý truy cập trang báo cáo], When [chọn lọc theo tháng và nhấn "Tải báo cáo tài chính"], Then [hệ thống xuất file tổng hợp toàn bộ chi phí phát sinh.]
